@@ -12,7 +12,29 @@ class AnotherWindow(QWidget):
    """
    def __init__(self):
       super().__init__()
+      # setting title
+      self.Currentuser = str()
+      self.setWindowTitle("Python ")
 
+      # setting geometry
+      self.setGeometry(100, 100, 100, 100)
+
+      # calling methods
+      self.UiComponents()
+      self.mainWindowSetup()
+
+      # showing all the widgets
+      self.show()
+
+
+
+
+
+
+   def UiComponents(self):
+      pass
+   def mainWindowSetup(self):
+      pass
 
 
 if __name__ == '__main__':
