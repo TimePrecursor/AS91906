@@ -1,25 +1,25 @@
 import sys
 import PyQt5
-from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
+from PyQt5.QtCore import QMetaObject
+from PyQt6.QtCore import QCoreApplication
+import PyQt6
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QWidget
 
-def main():
-   # Create the application instance
+class AnotherWindow(QWidget):
+   """
+   This "window" is a QWidget. If it has no parent, it
+   will appear as a free-floating window as we want.
+   """
+   def __init__(self):
+      super().__init__()
+
+
+
+if __name__ == '__main__':
    app = QApplication(sys.argv)
 
-   # Create the main window
    window = QMainWindow()
-   window.setWindowTitle("Simple PyQt Example")
-   window.setGeometry(100, 100, 400, 200)
-
-   # Create a label widget
-   label = QLabel("Hello, PyQt!", window)
-   label.move(150, 80)
-
-   # Show the window
    window.show()
 
-   # Execute the application
-   sys.exit(app.exec())
-
-if __name__ == "__main__":
-   main()
+   # Start the event loop.
+   app.exec()
