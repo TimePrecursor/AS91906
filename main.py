@@ -1,16 +1,25 @@
-# This is a sample Python script.
+import sys
+import PyQt5
+from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+   # Create the application instance
+   app = QApplication(sys.argv)
 
+   # Create the main window
+   window = QMainWindow()
+   window.setWindowTitle("Simple PyQt Example")
+   window.setGeometry(100, 100, 400, 200)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+   # Create a label widget
+   label = QLabel("Hello, PyQt!", window)
+   label.move(150, 80)
 
+   # Show the window
+   window.show()
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+   # Execute the application
+   sys.exit(app.exec())
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+   main()
