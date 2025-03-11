@@ -19,7 +19,7 @@ class Window(QMainWindow):
       super().__init__()
       # setting title
       self.Currentuser = str()
-      # self.setWindowTitle("Python ")
+      # self.setWindowTitle("Pythhon ")
       self.setFixedSize(500, 300)
       # setting geometry
       self.setGeometry(100, 100, 100, 100)
